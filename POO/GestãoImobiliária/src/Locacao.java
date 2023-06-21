@@ -1,17 +1,25 @@
 import java.util.Date;
 
 public class Locacao {
-
+    // Atributos
     private Date dataInicio;
     private Date dataTerminio;
     private Date dataPagamento;
+    private Corretor corretor;
+    private Imovel imovel;
+    private Locatario locatario;
 
-    public Locacao(Date dataInicio, Date dataTerminio, Date dataPagamento) {
+    public Locacao(Date dataInicio, Date dataTerminio, Date dataPagamento, Corretor corretor, Imovel imovel,
+            Locatario locatario) {
         this.dataInicio = dataInicio;
         this.dataTerminio = dataTerminio;
         this.dataPagamento = dataPagamento;
+        this.corretor = corretor;
+        this.imovel = imovel;
+        this.locatario = locatario;
     }
 
+    // Metodo de acesso
     public Date getDataInicio() {
         return dataInicio;
     }
@@ -34,6 +42,39 @@ public class Locacao {
 
     public void setDataPagamento(Date dataPagamento) {
         this.dataPagamento = dataPagamento;
+    }
+
+    // Associação
+    public Corretor getCorretor() {
+        return corretor;
+    }
+
+    public void setCorretor(Corretor corretor) {
+        this.corretor = corretor;
+    }
+
+    public Imovel getImovel() {
+        return imovel;
+    }
+
+    public void setImovel(Imovel imovel) {
+        this.imovel = imovel;
+    }
+
+    public Locatario getLocatario() {
+        return locatario;
+    }
+
+    public void setLocatario(Locatario locatario) {
+        this.locatario = locatario;
+    }
+
+    public void enviarCobranca() {
+
+    }
+
+    public void pagarProprietario() {
+
     }
 
 }

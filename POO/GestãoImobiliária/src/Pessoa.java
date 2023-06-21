@@ -1,5 +1,5 @@
-abstract class Pessoa {
-
+public abstract class Pessoa {
+    // Atributos
     private String nome;
     private String telefone;
     private String endereco;
@@ -12,6 +12,7 @@ abstract class Pessoa {
         this.cpf = cpf;
     }
 
+    // Metodo de acesso
     public String getNome() {
         return nome;
 

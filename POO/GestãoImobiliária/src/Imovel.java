@@ -1,21 +1,30 @@
-abstract class Imovel {
+import java.util.ArrayList;
+import java.util.List;
 
+public abstract class Imovel {
+    // Atributos
     private int codigo;
     private String endereco;
     private double valorLocacao;
     private int vagasGaragem;
     private int quartos;
     private int banheiros;
+    private List<Locacao> locacao;
+    private Proprietario proprietario;
 
-    public Imovel(int codigo, String endereco, double valorLocacao, int vagasGaragem, int quartos, int banheiros) {
+    public Imovel(int codigo, String endereco, double valorLocacao, int vagasGaragem, int quartos, int banheiros,
+            List locacao, Proprietario proprietario) {
         this.codigo = codigo;
         this.endereco = endereco;
         this.valorLocacao = valorLocacao;
         this.vagasGaragem = vagasGaragem;
         this.quartos = quartos;
         this.banheiros = banheiros;
+        this.locacao = new ArrayList<Locacao>();
+        this.proprietario = proprietario;
     }
 
+    // Metodo de acesso
     public int getCodigo() {
         return codigo;
     }
@@ -62,5 +71,9 @@ abstract class Imovel {
 
     public void setBanheiros(int banheiros) {
         this.banheiros = banheiros;
+
     }
+
+    abstract double calcularAluguel();
+
 }

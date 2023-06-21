@@ -1,5 +1,6 @@
-public class Proprietario extends Pessoa {
 
+public class Proprietario extends Pessoa implements ReceberValor {
+    // Atributos
     private String conta;
     private String agencia;
 
@@ -7,8 +8,10 @@ public class Proprietario extends Pessoa {
         super(nome, telefone, endereco, cpf);
         this.conta = conta;
         this.agencia = agencia;
+
     }
 
+    // Metodo de acesso
     public String getConta() {
         return conta;
     }
@@ -23,5 +26,10 @@ public class Proprietario extends Pessoa {
 
     public void setAgencia(String agencia) {
         this.agencia = agencia;
+    }
+
+    @Override
+    public void receber(double valor) {
+
     }
 }
