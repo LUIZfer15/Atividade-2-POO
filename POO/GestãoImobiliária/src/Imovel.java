@@ -74,6 +74,15 @@ public abstract class Imovel {
 
     }
 
+    public Proprietario getProprietario() {
+        return proprietario;
+    }
+
+    public void setProprietario(Proprietario proprietario) {
+        this.proprietario = proprietario;
+
+    }
+
     abstract double calcularAluguel();
 
 }
